@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/rips/cam/cod/log/Log.java" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/src/rips/cam/cod/proc/Main.java" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/src/rips/cam/cod/proc/VentanaPrincipal.java" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/src/rips/cam/cod/rips/ArchivoAM.java" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/src/rips/cam/cod/rips/ArchivoAP.java" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/src/rips/cam/cod/rips/ArchivoAT.java" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/src/rips/cam/cod/rips/ArchivoAU.java" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/src/rips/cam/cod/rips/ArchivosAC.java" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/src/rips/cam/cod/rips/ArchivosAF.java" charset="ISO-8859-1" />
+  </component>
+</project>
