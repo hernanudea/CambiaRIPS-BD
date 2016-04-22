@@ -7,18 +7,18 @@ import rips.cam.cod.log.Log;
 import rips.cam.cod.proc.VentanaPrincipal;
 import rips.cam.cod.rips.JuegoRips;
 
-public class ArchivoCT {
+public class ArchivosCT {
 	String codigoPrestador;
 	Date fechaRemision;
 	String codigoArchivo;
 	int totalRegistros;
 	boolean cargado;
 	String rutaJuegoRips;
-	public static Vector<ArchivoCT> vectorCT = new Vector<ArchivoCT>();
+	public static Vector<ArchivosCT> vectorCT = new Vector<ArchivosCT>();
 	public static boolean error = false;
 	public static boolean advertencia = false;
 
-	public ArchivoCT(String codigoPrestador, Date fechaRemision, String codigoArchivo, int totalRegistros, boolean cargado, String rutaJuegoRips) {
+	public ArchivosCT(String codigoPrestador, Date fechaRemision, String codigoArchivo, int totalRegistros, boolean cargado, String rutaJuegoRips) {
 		this.codigoPrestador = codigoPrestador;
 		this.fechaRemision = fechaRemision;
 		this.codigoArchivo = codigoArchivo;
@@ -75,7 +75,7 @@ public class ArchivoCT {
 		this.rutaJuegoRips = rutaJuegoRips;
 	}
 
-	public void agregarAlVector(ArchivoCT ct) {
+	public void agregarAlVector(ArchivosCT ct) {
 		vectorCT.add(ct);
 	}
 
@@ -120,7 +120,7 @@ public class ArchivoCT {
 					if ((char) vectorCT.get(i).codigoArchivo.toUpperCase().charAt(0) == 'A') {
 						jp.setContieneCT(true);
 					} else {
-						VentanaPrincipal.agregarATxaRespuesta("\nError,ArchivoCT,Linea " + i + ",Segundo caracter del jombre es la T. pero el primero no el valido");
+						VentanaPrincipal.agregarATxaRespuesta("\nError,ArchivosCT,Linea " + i + ",Segundo caracter del jombre es la T. pero el primero no el valido");
 					}
 				}
 				break;

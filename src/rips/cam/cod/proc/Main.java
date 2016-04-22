@@ -20,5 +20,7 @@ public class Main {
 //ToDo: Usar la interface en todos los archivos dfe RIPS
 //ToDo: Quitar las advertencias del log
 //ToDo: Unir varios juegos de RIPS
+//ToDo: cuando no hallan errores en un archivo mjostrar en la pantalla principal que el archivo esta ok
+
 
 

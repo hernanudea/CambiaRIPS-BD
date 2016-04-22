@@ -15,7 +15,7 @@ import rips.cam.cod.rips.JuegoRips;
 import rips.cam.cod.rips.Rips;
 import rips.cam.cod.validaciones.Validaciones;
 
-public class ArchivoAU extends Rips {
+public class ArchivosAU extends Rips {
 	Date horaIngresoUsuario;
 	int causaExterna;
 	String diagnosticoSalida;
@@ -30,10 +30,10 @@ public class ArchivoAU extends Rips {
 	public static String ruta;
 	public static boolean error = false;
 	public static boolean advertencia = false;
-	public static ArrayList<ArchivoAU> arrayAU = new ArrayList<ArchivoAU>();
+	public static ArrayList<ArchivosAU> arrayAU = new ArrayList<ArchivosAU>();
 
-	public ArchivoAU(int numeroFactura, String codigoPrestador, String tipoIdentificacionUsuario, String numeroIdentificacionUsuario, Date fechaProcedimientoConsulta, String numeroAutorizacion, String codigoConsultaProcedimiento, String codigoDiagnosticoPrincipal, String codigoDiagnosticoRelacionado1, Date horaIngresoUsuario, int causaExterna,
-			String diagnosticoSalida, String diagnosticoRelacionado2, String diagnosticoRelacionado3, int destinoUsuario, int tipoServicio, int estadoSalida, int causaBasicaMuerte, Date fechaSalidaUsuario, Date horaSalidaUsuario) {
+	public ArchivosAU(int numeroFactura, String codigoPrestador, String tipoIdentificacionUsuario, String numeroIdentificacionUsuario, Date fechaProcedimientoConsulta, String numeroAutorizacion, String codigoConsultaProcedimiento, String codigoDiagnosticoPrincipal, String codigoDiagnosticoRelacionado1, Date horaIngresoUsuario, int causaExterna,
+					  String diagnosticoSalida, String diagnosticoRelacionado2, String diagnosticoRelacionado3, int destinoUsuario, int tipoServicio, int estadoSalida, int causaBasicaMuerte, Date fechaSalidaUsuario, Date horaSalidaUsuario) {
 		super(numeroFactura, codigoPrestador, tipoIdentificacionUsuario, numeroIdentificacionUsuario, fechaProcedimientoConsulta, numeroAutorizacion, codigoConsultaProcedimiento, codigoDiagnosticoPrincipal, codigoDiagnosticoRelacionado1);
 		this.horaIngresoUsuario = horaIngresoUsuario;
 		this.causaExterna = causaExterna;

@@ -21,7 +21,7 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 
 import rips.cam.cod.codigos.Codigos;
 import rips.cam.cod.log.Log;
-import rips.cam.cod.rips.imp.ArchivoCT;
+import rips.cam.cod.rips.imp.*;
 import rips.cam.cod.rips.JuegoRips;
 import rips.cam.cod.validaciones.Validaciones;
 
@@ -30,7 +30,7 @@ import rips.cam.cod.validaciones.Validaciones;
  */
 public class VentanaPrincipal extends javax.swing.JFrame implements ActionListener {
     private static final long serialVersionUID = 1L;
-    private static String version = "v1.0.0";
+    private static String version = "v1.0.5";
 
     public static boolean advertenciasArchivoCT = false;
     public static boolean advertenciasArchivoCodigos = false;
@@ -152,8 +152,9 @@ public class VentanaPrincipal extends javax.swing.JFrame implements ActionListen
                 } else {
                     JuegoRips juegoRips;
                     juegoRips = new JuegoRips(archivoCT.getSelectedFile().toString());
-                    ArchivoCT.determinarArchivosEnJuegoRips(juegoRips);
+                    ArchivosCT.determinarArchivosEnJuegoRips(juegoRips);
                     JuegoRips.abrirTodosLosArchivo(juegoRips);
+                    JuegoRips.compararValores();
                 }
                 mostrarResultado();
             }// validacion codigos
@@ -192,8 +193,13 @@ public class VentanaPrincipal extends javax.swing.JFrame implements ActionListen
 
     private void iniciar() {
         ocultarResultado();
-        ArchivoCT.limpiarVector();
-        Codigos.limpiarMap();
+        ArchivosCT.limpiarVector(); //ToDo: Verificar si tengo este metodo funcionando
+        Codigos.limpiarMap();//ToDo: no siempre será conveniente limpiar este objeto
+        ArchivosAC.limpiarRegistros();
+        ArchivosAT.limpiarRegistros();
+        ArchivosAP.limpiarRegistros();
+        ArchivosAM.limpiarRegistros();
+        ArchivosAF.limpiarRegistros();
     }
 
     private void buscarCT() {
@@ -206,7 +212,7 @@ public class VentanaPrincipal extends javax.swing.JFrame implements ActionListen
             lblArchivoArchivo.setText(nombreArchivo);
             try {
                 // leemos el archivo
-                ArchivoCT.limpiarVector();
+                ArchivosCT.limpiarVector();
                 BufferedReader archivoLeer = new BufferedReader(new FileReader(nombreArchivo));
                 int lineasArchivoCT = 0;
                 while (archivoLeer.ready()) {
@@ -219,13 +225,13 @@ public class VentanaPrincipal extends javax.swing.JFrame implements ActionListen
                     } else {
                         // ToDo Validaciones a cada dato
                         boolean aa = Validaciones.isDate(arreglo[1]);
-                        ArchivoCT ct = new ArchivoCT(arreglo[0], new Date(arreglo[1]), arreglo[2], Integer.parseInt(arreglo[3]), false, nombreArchivo);
+                        ArchivosCT ct = new ArchivosCT(arreglo[0], new Date(arreglo[1]), arreglo[2], Integer.parseInt(arreglo[3]), false, nombreArchivo);
                         ct.agregarAlVector(ct);
                         erroresArchivoCT = false;
                     }
                 }
                 archivoLeer.close();
-                JOptionPane.showMessageDialog(this, "El Archivo fue procesado.\nSe cargaron " + ArchivoCT.vectorCT.size() + " registros.");
+                JOptionPane.showMessageDialog(this, "El Archivo fue procesado.\nSe cargaron " + ArchivosCT.vectorCT.size() + " registros.");
 
             } catch (FileNotFoundException fnf) {
                 JOptionPane.showMessageDialog(this, "El archivo no fue encontrado " + fnf.getMessage(), "Error", 1);
