@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_cambiarips-bd" default="compile.module.cambiarips-bd">
+  <dirname property="module.cambiarips-bd.basedir" file="${ant.file.module_cambiarips-bd}"/>
+  
+  <property name="module.jdk.home.cambiarips-bd" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.cambiarips-bd" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.cambiarips-bd" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.cambiarips-bd" value="-encoding ISO-8859-1 -source 8 -target 8 ${compiler.args}"/>
+  
+  <property name="cambiarips-bd.output.dir" value="${module.cambiarips-bd.basedir}/out/production/CambiaRIPS-BD"/>
+  <property name="cambiarips-bd.testoutput.dir" value="${module.cambiarips-bd.basedir}/out/test/CambiaRIPS-BD"/>
+  
+  <path id="cambiarips-bd.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="cambiarips-bd.module.production.classpath">
+    <path refid="${module.jdk.classpath.cambiarips-bd}"/>
+  </path>
+  
+  <path id="cambiarips-bd.runtime.production.module.classpath">
+    <pathelement location="${cambiarips-bd.output.dir}"/>
+  </path>
+  
+  <path id="cambiarips-bd.module.classpath">
+    <path refid="${module.jdk.classpath.cambiarips-bd}"/>
+    <pathelement location="${cambiarips-bd.output.dir}"/>
+  </path>
+  
+  <path id="cambiarips-bd.runtime.module.classpath">
+    <pathelement location="${cambiarips-bd.testoutput.dir}"/>
+    <pathelement location="${cambiarips-bd.output.dir}"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.cambiarips-bd">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.cambiarips-bd">
+    <patternset refid="excluded.from.module.cambiarips-bd"/>
+  </patternset>
+  
+  <path id="cambiarips-bd.module.sourcepath">
+    <dirset dir="${module.cambiarips-bd.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.cambiarips-bd" depends="compile.module.cambiarips-bd.production,compile.module.cambiarips-bd.tests" description="Compile module CambiaRIPS-BD"/>
+  
+  <target name="compile.module.cambiarips-bd.production" depends="register.custom.compilers" description="Compile module CambiaRIPS-BD; production classes">
+    <mkdir dir="${cambiarips-bd.output.dir}"/>
+    <javac2 destdir="${cambiarips-bd.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.cambiarips-bd}/javac">
+      <compilerarg line="${compiler.args.cambiarips-bd}"/>
+      <bootclasspath refid="cambiarips-bd.module.bootclasspath"/>
+      <classpath refid="cambiarips-bd.module.production.classpath"/>
+      <src refid="cambiarips-bd.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.cambiarips-bd"/>
+    </javac2>
+    
+    <copy todir="${cambiarips-bd.output.dir}">
+      <fileset dir="${module.cambiarips-bd.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.cambiarips-bd.tests" depends="register.custom.compilers,compile.module.cambiarips-bd.production" description="compile module CambiaRIPS-BD; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.cambiarips-bd" description="cleanup module">
+    <delete dir="${cambiarips-bd.output.dir}"/>
+    <delete dir="${cambiarips-bd.testoutput.dir}"/>
+  </target>
+</project>
