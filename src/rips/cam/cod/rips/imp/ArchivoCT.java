@@ -1,12 +1,11 @@
-package rips.cam.cod.rips;
+package rips.cam.cod.rips.imp;
 
 import java.util.Date;
 import java.util.Vector;
 
-import javax.swing.JOptionPane;
-
 import rips.cam.cod.log.Log;
 import rips.cam.cod.proc.VentanaPrincipal;
+import rips.cam.cod.rips.JuegoRips;
 
 public class ArchivoCT {
 	String codigoPrestador;

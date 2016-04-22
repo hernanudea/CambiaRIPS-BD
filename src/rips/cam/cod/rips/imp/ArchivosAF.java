@@ -1,4 +1,4 @@
-package rips.cam.cod.rips;
+package rips.cam.cod.rips.imp;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -10,6 +10,8 @@ import java.util.ArrayList;
 import java.util.Date;
 
 import rips.cam.cod.proc.VentanaPrincipal;
+import rips.cam.cod.rips.JuegoRips;
+import rips.cam.cod.rips.Rips;
 
 public class ArchivosAF extends Rips {
 

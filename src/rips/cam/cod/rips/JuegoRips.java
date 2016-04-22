@@ -3,6 +3,7 @@ package rips.cam.cod.rips;
 import java.io.File;
 
 import rips.cam.cod.proc.VentanaPrincipal;
+import rips.cam.cod.rips.imp.*;
 
 public class JuegoRips {
 

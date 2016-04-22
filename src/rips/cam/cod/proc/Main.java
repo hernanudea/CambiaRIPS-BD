@@ -14,4 +14,11 @@ public class Main {
     }
 }
 
-// En el boton Archivo CT, validar los datos.
+
+//ToDo: En el boton Archivo CT, validar los datos.
+//ToDo: Cargar archivo de codigos automaticametne
+//ToDo: Usar la interface en todos los archivos dfe RIPS
+//ToDo: Quitar las advertencias del log
+//ToDo: Unir varios juegos de RIPS
+
+

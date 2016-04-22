@@ -21,7 +21,7 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 
 import rips.cam.cod.codigos.Codigos;
 import rips.cam.cod.log.Log;
-import rips.cam.cod.rips.ArchivoCT;
+import rips.cam.cod.rips.imp.ArchivoCT;
 import rips.cam.cod.rips.JuegoRips;
 import rips.cam.cod.validaciones.Validaciones;
 
