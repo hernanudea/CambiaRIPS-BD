@@ -31,6 +31,8 @@ import rips.cam.cod.validaciones.Validaciones;
 public class VentanaPrincipal extends javax.swing.JFrame implements ActionListener {
     private static final long serialVersionUID = 1L;
     private static String version = "v1.0.5";
+    private static Validaciones validador = new Validaciones();
+
 
     public static boolean advertenciasArchivoCT = false;
     public static boolean advertenciasArchivoCodigos = false;
@@ -123,18 +125,15 @@ public class VentanaPrincipal extends javax.swing.JFrame implements ActionListen
         if (e.getActionCommand().equals("Salir")) {
             Salir();
         }
-
         if (e.getActionCommand().equals("Buscar CT")) {
             buscarCT();
         }
-
         if (e.getActionCommand().equals("Buscar Códigos")) {
             buscarCodigos();
         }
         if (e.getActionCommand().equals("Iniciar")) {
             iniciar();
         }
-
         if (e.getActionCommand().equals("Ejecutar")) {
             ejecutar();
         }

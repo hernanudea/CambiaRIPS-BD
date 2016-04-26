@@ -17,10 +17,11 @@ public class Main {
 
 //ToDo: En el boton Archivo CT, validar los datos.
 //ToDo: Cargar archivo de codigos automaticametne
-//ToDo: Usar la interface en todos los archivos dfe RIPS
+//ToDo: Usar la interface en todos los archivos de RIPS
 //ToDo: Quitar las advertencias del log
 //ToDo: Unir varios juegos de RIPS
-//ToDo: cuando no hallan errores en un archivo mjostrar en la pantalla principal que el archivo esta ok
+//ToDo: cuando no hallan errores en un archivo mostrar en la pantalla principal que el archivo esta ok
+//ToDo: Cambiar 0 y 1 por error y advertencioa, nada de numeros magicos
 
 
 

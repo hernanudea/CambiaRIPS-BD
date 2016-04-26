@@ -7,4 +7,6 @@ public interface InterfaceRIPS {
 
 
     public void limpiarRegistros();
+
+    public void validarTodosLosCampos();
 }
