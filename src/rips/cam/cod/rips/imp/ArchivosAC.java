@@ -187,61 +187,57 @@ public class ArchivosAC extends Rips {
 
     private static void validarTodoslosCampos(String[] arreglo, int lineaArchivoAC) {
         Validaciones validar = new Validaciones();
-        if (!validar.isNumero(arreglo[0])) {
+        if (!Validaciones.isNumero(arreglo[0])) {
             error = true;
-            Log.guardarIncidencia(0, "AC", lineaArchivoAC, arreglo[0], "Numero de factura debe ser un valor numerico, este valor no lo es");
+            Log.guardarIncidencia(0, "AC", lineaArchivoAC, arreglo[0], "Numero de factura debe ser un valor numerico. Este valor no lo es");
         }
-        if (!validar.verificarLongitud(arreglo[1], 12)) {
+        if (!Validaciones.verificarLongitud(arreglo[1], 12)) {
             error = true;
-            Log.guardarIncidencia(0, "AC", lineaArchivoAC, arreglo[1], "Código del prestador debe tener 12 caracteres, este valor no los tiene");
+            Log.guardarIncidencia(0, "AC", lineaArchivoAC, arreglo[1], "Código del prestador debe tener 12 caracteres. Este valor no los tiene");
         }
-        if (!validar.verificarLongitud(arreglo[2], 2)) {
+        if (!Validaciones.verificarLongitud(arreglo[2], 2)) {
             error = true;
-            Log.guardarIncidencia(0, "AC", lineaArchivoAC, arreglo[2], "Tipo de identificación debe tener dos caracteres, este valor no los tiene");
+            Log.guardarIncidencia(0, "AC", lineaArchivoAC, arreglo[2], "Tipo de identificación debe tener dos caracteres. Este valor no los tiene");
         }
-        if (!validar.isNumero(arreglo[3])) {
+        if (!Validaciones.isNumero(arreglo[3])) {
             error = true;
-            Log.guardarIncidencia(0, "AC", lineaArchivoAC, arreglo[3], "Numero de Identificacion debe ser un valor numerico, este valor no lo es");
+            Log.guardarIncidencia(0, "AC", lineaArchivoAC, arreglo[3], "Numero de Identificacion debe ser un valor numerico. Este valor no lo es");
         }
-        if (!validar.isDate(arreglo[4])) {
+        if (!Validaciones.isDate(arreglo[4])) {
             error = true;
-            Log.guardarIncidencia(0, "AC", lineaArchivoAC, arreglo[4], "Fecha de consulta debe ser una fecha valida, este valor no lo es");
+            Log.guardarIncidencia(0, "AC", lineaArchivoAC, arreglo[4], "Fecha de consulta debe ser una fecha valida. Este valor no lo es");
         }
-        if (!validar.isObligatorio(arreglo[6])) {
+        if (!Validaciones.isObligatorio(arreglo[6])) {
             error = true;
-            Log.guardarIncidencia(0, "AC", lineaArchivoAC, arreglo[6], "Código de consulta es requerido, este campo está vacio");
+            Log.guardarIncidencia(0, "AC", lineaArchivoAC, arreglo[6], "Código de consulta es requerido. Este campo está vacio");
         }
-        if (!validar.isObligatorio(arreglo[7])) {
+        if (!Validaciones.isObligatorio(arreglo[7])) {
             error = true;
-            Log.guardarIncidencia(0, "AC", lineaArchivoAC, arreglo[7], "Finalidad de la Consulta es requerido, este campo está vacio");
+            Log.guardarIncidencia(0, "AC", lineaArchivoAC, arreglo[7], "Finalidad de la Consulta es requerido. Este campo está vacio");
         }
-        if (!validar.isObligatorio(arreglo[8])) {
+        if (!Validaciones.isObligatorio(arreglo[8])) {
             error = true;
-            Log.guardarIncidencia(0, "AC", lineaArchivoAC, arreglo[8], "Causa Externa es requerido, este campo está vacio");
+            Log.guardarIncidencia(0, "AC", lineaArchivoAC, arreglo[8], "Causa Externa es requerido. Este campo está vacio");
         }
-        if (!validar.isObligatorio(arreglo[9])) {
+        if (!Validaciones.isObligatorio(arreglo[9])) {
             error = true;
-            Log.guardarIncidencia(0, "AC", lineaArchivoAC, arreglo[9], "Código Diagnostico Principal es requerido, este campo está vacio");
+            Log.guardarIncidencia(0, "AC", lineaArchivoAC, arreglo[9], "Código Diagnostico Principal es requerido. Este campo está vacio");
         }
-        if (!validar.verificarLongitud(arreglo[9], 4)) {
+        if (!Validaciones.verificarLongitud(arreglo[9], 4)) {
             error = true;
-            Log.guardarIncidencia(0, "AC", lineaArchivoAC, arreglo[9], "Código Diagnostico Principal debe tener cuatro caracteres, este valor no los tiene");
+            Log.guardarIncidencia(0, "AC", lineaArchivoAC, arreglo[9], "Código Diagnostico Principal debe tener cuatro caracteres. Este valor no los tiene");
         }
-        if (!validar.isObligatorio(arreglo[13])) {
+        if (!Validaciones.isObligatorio(arreglo[13])) {
             error = true;
-            Log.guardarIncidencia(0, "AC", lineaArchivoAC, arreglo[13], "Código Diagnostico Principal es requerido, este campo está vacio");
+            Log.guardarIncidencia(0, "AC", lineaArchivoAC, arreglo[13], "Código Diagnostico Principal es requerido. Este campo está vacio");
         }
         if (!validar.verificarRango(arreglo[13], 1, 3)) {
             error = true;
-            Log.guardarIncidencia(0, "AC", lineaArchivoAC, arreglo[13], "Tipo de Diagnostico Principal debe estar en el rango, este valor no cumple la condición");
+            Log.guardarIncidencia(0, "AC", lineaArchivoAC, arreglo[13], "Tipo de Diagnostico Principal debe estar en el rango. Este valor no cumple la condición");
         }
-        if (!validar.isNumero(arreglo[14].replace(".00", ""))) {
-            //System.out.println("Valor recibido:" + arreglo[14] + "\tFalse");
+        if (!Validaciones.isNumero(arreglo[14].replace(".00", ""))) {
             error = true;
-
             Log.guardarIncidencia(0, "AC", lineaArchivoAC, arreglo[14], "Valor de la consulta debe ser un valor numerico");
-        } else {
-            //System.out.println("Valor recibido:" + arreglo[14] + "\nFalse");
         }
     }
 

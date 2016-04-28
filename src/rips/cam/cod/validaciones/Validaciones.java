@@ -1,5 +1,7 @@
 package rips.cam.cod.validaciones;
 
+import rips.cam.cod.proc.VentanaPrincipal;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Locale;
@@ -19,11 +21,7 @@ public class Validaciones {
      * @return true si la cadena cumple con la longitus esperada o false si no lo hace.
      */
     public static boolean verificarLongitud(String cadena, int longitud) {
-        if (cadena.length() == longitud) {
-            return true;
-        } else {
-            return false;
-        }
+        return cadena.length() == longitud;
     }
 
     /**
@@ -51,7 +49,6 @@ public class Validaciones {
      */
     public static boolean isNumero(String cadena) {
         try {
-            //Integer.parseInt(cadena);
             Long.parseLong(cadena);
             return true;
         } catch (NumberFormatException nfe) {
@@ -70,17 +67,14 @@ public class Validaciones {
         if (cadena.equals("")) {
             return false;
         }
-        if (cadena.equals(null)) {
-            return false;
-        }
-        return true;
+        return !cadena.equals(null);
     }
 
     public boolean verificarRango(String valor, int limiteInferior, int limiteSuperior) {
-        int valorInt = Integer.parseInt(valor);
-        if (valorInt >= limiteInferior && valorInt <= limiteSuperior) {
-            return true;
-        } else {
+        try {
+            int valorInt = Integer.parseInt(valor);
+            return valorInt >= limiteInferior && valorInt <= limiteSuperior;
+        } catch (NumberFormatException nfe) {
             return false;
         }
     }

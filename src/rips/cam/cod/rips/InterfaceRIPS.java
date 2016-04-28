@@ -6,7 +6,7 @@ package rips.cam.cod.rips;
 public interface InterfaceRIPS {
 
 
-    public void limpiarRegistros();
+    void limpiarRegistros();
 
-    public void validarTodosLosCampos();
+    void validarTodosLosCampos();
 }

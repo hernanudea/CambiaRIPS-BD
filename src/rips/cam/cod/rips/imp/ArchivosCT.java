@@ -85,7 +85,7 @@ public class ArchivosCT {
 
 	public static void determinarArchivosEnJuegoRips(JuegoRips jp) {
 		for (int i = 0; i < vectorCT.size(); i++) {
-			switch ((char) vectorCT.get(i).codigoArchivo.toUpperCase().charAt(1)) {
+			switch (vectorCT.get(i).codigoArchivo.toUpperCase().charAt(1)) {
 			case 'F':
 				jp.setContieneAF(true);
 				break;
@@ -114,10 +114,10 @@ public class ArchivosCT {
 				jp.setContieneAH(true);
 				break;
 			case 'T':
-				if ((char) vectorCT.get(i).codigoArchivo.toUpperCase().charAt(0) == 'A') {
+				if (vectorCT.get(i).codigoArchivo.toUpperCase().charAt(0) == 'A') {
 					jp.setContieneAT(true);
 				} else {
-					if ((char) vectorCT.get(i).codigoArchivo.toUpperCase().charAt(0) == 'A') {
+					if (vectorCT.get(i).codigoArchivo.toUpperCase().charAt(0) == 'A') {
 						jp.setContieneCT(true);
 					} else {
 						VentanaPrincipal.agregarATxaRespuesta("\nError,ArchivosCT,Linea " + i + ",Segundo caracter del jombre es la T. pero el primero no el valido");

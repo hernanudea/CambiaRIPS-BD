@@ -30,7 +30,7 @@ import rips.cam.cod.validaciones.Validaciones;
  */
 public class VentanaPrincipal extends javax.swing.JFrame implements ActionListener {
     private static final long serialVersionUID = 1L;
-    private static String version = "v1.0.5";
+    private static String version = "v1.0.7";
     private static Validaciones validador = new Validaciones();
 
 
@@ -270,13 +270,9 @@ public class VentanaPrincipal extends javax.swing.JFrame implements ActionListen
                     // ToDo Verificar los datos de cada columna
                     erroresArchivoCodigos = false;
                     boolean procesar;
-                    if (arreglo[2].toUpperCase().equals("S")) {
-                        procesar = true;
-                    } else {
-                        procesar = false;
-                    }
+                    procesar = arreglo[2].toUpperCase().equals("S");
                     Codigos codigos = new Codigos(arreglo[0], arreglo[1], procesar, arreglo[3]);
-                    codigos.agregarAlVector(codigos);
+                    Codigos.agregarAlVector(codigos);
                 }
             }
             archivoLeer.close();
