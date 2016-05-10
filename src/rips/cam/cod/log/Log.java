@@ -52,8 +52,10 @@ public class Log {
             } catch (IOException e) {
                 VentanaPrincipal.mostrarMensaje("No fue posible guardar el archivo Log");
             }
-        }else{
-            VentanaPrincipal.mostrarMensaje("Felicidades!\nNo se encontraron errores.");
+        } else {
+            if (VentanaPrincipal.mostrarMensajeFelicitación) {
+                VentanaPrincipal.mostrarMensaje("Felicidades!\nNo se encontraron errores.");
+            }
         }
     }
 }

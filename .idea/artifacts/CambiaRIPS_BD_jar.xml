@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="CambiaRIPS-BD:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/CambiaRIPS_BD_jar</output-path>
-    <root id="archive" name="CambiaRIPS-BD_jar.jar">
-      <element id="module-output" name="CambiaRIPS-BD" />
-    </root>
-  </artifact>
-</component>

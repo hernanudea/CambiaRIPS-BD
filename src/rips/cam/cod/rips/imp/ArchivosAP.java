@@ -31,7 +31,7 @@ public class ArchivosAP extends Rips {
     public static boolean advertencia = false;
     public static int valorTotalProcedimiento = 0;
 
-    public ArchivosAP(int numeroFactura, String codigoPrestador, String tipoIdentificacionUsuario, String numeroIdentificacionUsuario, Date fechaProcedimientoConsulta, String numeroAutorizacion, String codigoConsultaProcedimiento, String codigoDiagnosticoPrincipal, String codigoDiagnosticoRelacionado1, int ambitoRealizacionProcedimiento,
+    public ArchivosAP(int numeroFactura, String codigoPrestador, String tipoIdentificacionUsuario, String numeroIdentificacionUsuario, String fechaProcedimientoConsulta, String numeroAutorizacion, String codigoConsultaProcedimiento, String codigoDiagnosticoPrincipal, String codigoDiagnosticoRelacionado1, int ambitoRealizacionProcedimiento,
                       int finalidadProcedimiento, int personalAtiende, String complicacion, int formaRealizacionActoQuirurgico, int valorProcedimiento) {
         super(numeroFactura, codigoPrestador, tipoIdentificacionUsuario, numeroIdentificacionUsuario, fechaProcedimientoConsulta, numeroAutorizacion, codigoConsultaProcedimiento, codigoDiagnosticoPrincipal, codigoDiagnosticoRelacionado1);
         this.ambitoRealizacionProcedimiento = ambitoRealizacionProcedimiento;

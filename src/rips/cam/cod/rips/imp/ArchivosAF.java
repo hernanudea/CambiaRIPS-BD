@@ -44,7 +44,7 @@ public class ArchivosAF extends Rips {
     public static boolean error = false;
     public static boolean advertencia = false;
 
-    public ArchivosAF(int numeroFactura, String codigoPrestador, String tipoIdentificacionUsuario, String numeroIdentificacionUsuario, Date fechaProcedimientoConsultaIngreso, String numeroAutorizacion, String codigoDiagnosticoRelacionado1, String codigoPrestador2, String razonSocialIPS, String tipoIdentificacionIPS, String numeroIdentificacionIPS,
+    public ArchivosAF(int numeroFactura, String codigoPrestador, String tipoIdentificacionUsuario, String numeroIdentificacionUsuario, String fechaProcedimientoConsultaIngreso, String numeroAutorizacion, String codigoDiagnosticoRelacionado1, String codigoPrestador2, String razonSocialIPS, String tipoIdentificacionIPS, String numeroIdentificacionIPS,
                       int numeroFactura2, Date fechaExpedicion, Date fechaInicioPeriodoFacturacion, Date fechaFinPeriodoFacturacion, String codigoAdministradora, String nombreAdministradora, String numeroContrato, String planBeneficios, String numeroPoliza, int valorCopago, int valorComision, int valorDescuento, int valorNeto) {
         super(numeroFactura, codigoPrestador, tipoIdentificacionUsuario, numeroIdentificacionUsuario, fechaProcedimientoConsultaIngreso, numeroAutorizacion, codigoDiagnosticoRelacionado1);
         codigoPrestador = codigoPrestador2;

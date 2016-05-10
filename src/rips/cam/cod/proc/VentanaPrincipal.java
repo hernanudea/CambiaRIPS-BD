@@ -30,8 +30,9 @@ import rips.cam.cod.validaciones.Validaciones;
  */
 public class VentanaPrincipal extends javax.swing.JFrame implements ActionListener {
     private static final long serialVersionUID = 1L;
-    private static String version = "v1.0.7";
-    private static Validaciones validador = new Validaciones();
+    private static String version = "v1.0.9";
+    //private static Validaciones validador = new Validaciones();
+    public static boolean mostrarMensajeFelicitación = true;
 
 
     public static boolean advertenciasArchivoCT = false;
@@ -140,13 +141,16 @@ public class VentanaPrincipal extends javax.swing.JFrame implements ActionListen
     }
 
     private void ejecutar() {
+        mostrarMensajeFelicitación = true;
         if (archivoCT.getSelectedFile() == null) {
             JOptionPane.showMessageDialog(this, "No se ha seleccionado ningún archivo de RIPS", "Advertencia", 1);
+            mostrarMensajeFelicitación = false;
         } else {
             if (codigos.getSelectedFile() == null) {
                 JOptionPane.showMessageDialog(this, "No se ha seleccionado ningún archivo de Códigos", "Advertencia", 1);
+                mostrarMensajeFelicitación = false;
             } else {
-                if (erroresArchivoCodigos || erroresArchivoCT) { // verificamos si se presento otro tipo de eror en los archivos
+                if (erroresArchivoCodigos || erroresArchivoCT) { // verificamos si se presento otro tipo de error en los archivos
                     JOptionPane.showMessageDialog(this, "Se presentaron errores durante la carga de los archivos.\nPor favor corrijalos he intentelo de nuevo", "Advertencia", 1);
                 } else {
                     JuegoRips juegoRips;

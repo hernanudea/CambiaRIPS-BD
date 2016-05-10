@@ -38,7 +38,7 @@ public class ArchivosAM extends Rips {
     public static boolean advertencia = false;
     public static int valorTotalMedicamentos = 0;
 
-    public ArchivosAM(int numeroFactura, String codigoPrestador, String tipoIdentificacionUsuario, String numeroIdentificacionUsuario, Date fechaProcedimientoConsulta, String numeroAutorizacion, String codigoConsultaProcedimiento, String codigoDiagnosticoPrincipal, String codigoDiagnosticoRelacionado1, int numeroFactura2, String codigoPrestador2,
+    public ArchivosAM(int numeroFactura, String codigoPrestador, String tipoIdentificacionUsuario, String numeroIdentificacionUsuario, String fechaProcedimientoConsulta, String numeroAutorizacion, String codigoConsultaProcedimiento, String codigoDiagnosticoPrincipal, String codigoDiagnosticoRelacionado1, int numeroFactura2, String codigoPrestador2,
                       String tipoIdentificacionUsuario2, String numeroIdentificacionUsuario2, String numeroAutorizacion2, String codigoMedicamento, int tipoMedicamento, String nombreGenericoMedicamento, String formaFarmaceutica, String concentracionMedicamento, String unidadMedica, int numeroUnidad, int valorUnitarioMedicamento, int valorTotalmedicamento) {
         super(numeroFactura, codigoPrestador, tipoIdentificacionUsuario, numeroIdentificacionUsuario, fechaProcedimientoConsulta, numeroAutorizacion, codigoConsultaProcedimiento, codigoDiagnosticoPrincipal, codigoDiagnosticoRelacionado1);
         numeroFactura = numeroFactura2;

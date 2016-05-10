@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="CambiaRIPS-Code-v109">
+    <output-path>$PROJECT_DIR$/../../../Documentos/RIPS/App</output-path>
+    <root id="archive" name="CambiaRIPS-BD.jar">
+      <element id="module-output" name="CambiaRIPS-BD" />
+    </root>
+  </artifact>
+</component>

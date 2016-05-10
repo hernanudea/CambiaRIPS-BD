@@ -10,5 +10,6 @@
     <file url="file://$PROJECT_DIR$/src/rips/cam/cod/rips/imp/ArchivosAP.java" charset="ISO-8859-1" />
     <file url="file://$PROJECT_DIR$/src/rips/cam/cod/rips/imp/ArchivosAT.java" charset="ISO-8859-1" />
     <file url="file://$PROJECT_DIR$/src/rips/cam/cod/rips/imp/ArchivosAU.java" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/src/rips/cam/cod/validaciones/Validaciones.java" charset="ISO-8859-1" />
   </component>
 </project>

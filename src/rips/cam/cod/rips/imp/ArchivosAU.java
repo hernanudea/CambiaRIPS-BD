@@ -32,7 +32,7 @@ public class ArchivosAU extends Rips {
 	public static boolean advertencia = false;
 	public static ArrayList<ArchivosAU> arrayAU = new ArrayList<ArchivosAU>();
 
-	public ArchivosAU(int numeroFactura, String codigoPrestador, String tipoIdentificacionUsuario, String numeroIdentificacionUsuario, Date fechaProcedimientoConsulta, String numeroAutorizacion, String codigoConsultaProcedimiento, String codigoDiagnosticoPrincipal, String codigoDiagnosticoRelacionado1, Date horaIngresoUsuario, int causaExterna,
+	public ArchivosAU(int numeroFactura, String codigoPrestador, String tipoIdentificacionUsuario, String numeroIdentificacionUsuario, String fechaProcedimientoConsulta, String numeroAutorizacion, String codigoConsultaProcedimiento, String codigoDiagnosticoPrincipal, String codigoDiagnosticoRelacionado1, Date horaIngresoUsuario, int causaExterna,
 					  String diagnosticoSalida, String diagnosticoRelacionado2, String diagnosticoRelacionado3, int destinoUsuario, int tipoServicio, int estadoSalida, int causaBasicaMuerte, Date fechaSalidaUsuario, Date horaSalidaUsuario) {
 		super(numeroFactura, codigoPrestador, tipoIdentificacionUsuario, numeroIdentificacionUsuario, fechaProcedimientoConsulta, numeroAutorizacion, codigoConsultaProcedimiento, codigoDiagnosticoPrincipal, codigoDiagnosticoRelacionado1);
 		this.horaIngresoUsuario = horaIngresoUsuario;
