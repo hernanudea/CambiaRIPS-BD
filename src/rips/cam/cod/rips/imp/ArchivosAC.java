@@ -226,4 +226,6 @@ public class ArchivosAC extends Rips {
         this.valorNetoPagar = valorNetoPagar;
     }
 
+
+    //ToDo: verificar esto en al rama
 }
